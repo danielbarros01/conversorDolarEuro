@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EBEB"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="229dp"
+        android:text="Dolares"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDolares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/txtEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="27dp"
+        android:text="Euros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDolares" />
+
+    <EditText
+        android:id="@+id/etEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="182dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="364dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/rbEaD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euros a Dolares" />
+
+        <RadioButton
+            android:id="@+id/rbDaE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dolares a Euros" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="18dp"
+        android:text="Cambio a..."
+        app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        />
+
+    <EditText
+        android:id="@+id/etResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="text"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="40dp"
+        android:text="Convertir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etResultado" />
+</androidx.constraintlayout.widget.ConstraintLayout>
